@@ -375,13 +375,17 @@ TEST(function_test, argument_by_value_large)
 struct foo
 {
     void operator()() const
-    {}
+    {
+        std::cout << "test foo" << std::endl;
+    }
 };
 
 struct bar
 {
     void operator()() const
-    {}
+    {
+        std::cout << "bar foo" << std::endl;
+    }
 };
 
 TEST(function_test, target)
